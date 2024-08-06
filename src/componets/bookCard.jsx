@@ -1,12 +1,12 @@
 import React from "react";
 
 const bookCard = ({book}) =>{
-    console.log(book)
+    // console.log(book)
 
     return(
         <>
         <div style={{
-        width:"20%",
+        width:"25%",
         height: "70vh",
         borderRadius: "3%",
         boxShadow: "0 4px 8px 4px grey",
