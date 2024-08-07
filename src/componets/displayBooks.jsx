@@ -3,12 +3,12 @@ import BookCard from "./bookCard";
 
 const displayBook = () => {
     const handleRead = () => {
-        let localData = localStorage.getItem("employees");
+        let localData = localStorage.getItem("booktable");
         let newList = localData ? JSON.parse(localData) : [];
       return (
         <ul>
           {newList.map(item => (
-            <li key={item}>{item.surname}</li>
+            <li key={item.isbm}>{item.title}</li>
           ))}
         </ul>
       );

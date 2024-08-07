@@ -60,4 +60,17 @@ input {
   padding: 12px 10px;
 }
 
+li {
+  list-style: none;
+  padding: 3%;
+  font-size: x-large;
+  line-height: 1.5rem;
+}
+
+.delete {
+  background-color: red;
+  color: azure;
+  padding: 15px 12px;
+  border-radius: 2%;
+}
 

@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import AddBook from "./addBook";
+import {addBook} from "./addBook";
 
 
 const registerBook = () => {
@@ -10,10 +10,11 @@ const registerBook = () => {
         const value = event.target.value;
         setInput(values => ({...values, [name]: value}))
       }
+
       const handleSubmit = (event) => {
         event.preventDefault();
         console.log(input);
-        <AddBook book={input}/>
+        addBook(input)
       }
       
 

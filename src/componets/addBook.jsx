@@ -2,20 +2,16 @@
 import React from "react";
 
 console.log("this is from addbook")
-const addBook = ({book}) => {
-    console.log(book)
+export const addBook = (book) => {
+    // console.log(book)
 
     let myBooks = JSON.parse(localStorage.getItem("booktable"))
-    console.log(myBooks)
+    // console.log(myBooks)
     myBooks.push(book)
-    console.log()
+    // console.log()
     localStorage.setItem("booktable" , JSON.stringify(myBooks))
 
 
-    return(
-        <>
-        </>
-    )
+   
 }
 
-export default addBook

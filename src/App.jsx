@@ -1,10 +1,10 @@
-import AddBook from './componets/addBook';
+
 import DisplayBook from './componets/displayBooks';
 import DeleteBook from './componets/deleteBook';
 import './App.css'
 import UpdateBook from './componets/updateBook';
 import RegisterBook from './componets/registerBook';
-import BookCard from './componets/bookCard';
+
 function App() {
 
   let bookTable = [
@@ -53,13 +53,11 @@ function App() {
 
   return (
     <>
-    {/* <AddBook book={bookTable[0]}/> */}
-    <DisplayBook/>
-    <DeleteBook />
-    <UpdateBook/>
-    <BookCard book={bookTable[0]} />
+   
     <RegisterBook/>
-      
+    <div style={{marginRight:"1%"}}><DisplayBook/></div>
+    <div style={{marginRight:"1%"}}><DeleteBook /></div>
+    <div style={{marginRight:"1%"}}><UpdateBook/></div>
     </>
   )
 }

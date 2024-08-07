@@ -3,7 +3,7 @@
 const deleteBook = () =>{
     return(
         <>
-        <button type="submit">Delete</button>
+        <button type="submit" className="delete">Delete</button>
         </>
     )
 }
