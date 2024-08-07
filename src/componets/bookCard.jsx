@@ -1,4 +1,5 @@
 import React from "react";
+import DeleteBook from "./deleteBook"
 
 const bookCard = ({book}) =>{
     // console.log(book)
@@ -20,17 +21,32 @@ const bookCard = ({book}) =>{
              justifyContent:"center",
              
              padding: " 4%  0 4% 0" ,   
-        }}> <img src={book.coverDesigner} alt=""  className="image"/>  </div>
+        }}> <img src={book.coverDesigner} alt=""  style={{
+            width: "60%",
+            borderRadius: "2%",
+            boxShadow: "0 0 3px  3px rgb(84, 110, 41)",
+        }}/>  </div>
 
         <div style={{margin:"3%"}}>
-            <span className="title">{book.title}</span>
+            <span style={{
+                fontSize: "xx-large",
+                lineHeight: "3rem",
+                fontWeight: "400",
+                padding: "2%",
+            }}>{book.title}</span>
         </div>
         <div style={{margin:"3%"}}>
-            <span className="author">by {book.editer}</span>
+            <span style={{
+                fontSize: "x-large",
+                lineHeight: "3rem",
+                fontWeight: "400",
+                padding: "2%",
+            }}>by {book.editer}</span>
         </div>
         <div style={{margin:"3%"}}>
             <span className="price">{book.price}</span>
         </div>
+        <DeleteBook isbm={book.isbm}/>
       </div>
 
         </>

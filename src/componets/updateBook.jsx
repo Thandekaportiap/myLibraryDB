@@ -3,7 +3,12 @@
 const updateBook = () =>{
     return(
         <>
-        <button type="submit">Update</button>
+        <button type="submit" style={{
+            background:"green",
+            color:"white",
+            padding:"12px 12px",
+            borderRadius:"5px",
+        }}>Update</button>
         </>
     )
 }

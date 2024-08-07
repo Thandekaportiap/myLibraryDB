@@ -1,8 +1,7 @@
 
 import DisplayBook from './componets/displayBooks';
-import DeleteBook from './componets/deleteBook';
 import './App.css'
-import UpdateBook from './componets/updateBook';
+
 import RegisterBook from './componets/registerBook';
 
 function App() {
@@ -50,14 +49,14 @@ function App() {
 
   
   // localStorage.setItem("booktable" , JSON.stringify(bookTable))
+  let localData = JSON.parse(localStorage.getItem("booktable"));
 
   return (
     <>
    
     <RegisterBook/>
-    <div style={{marginRight:"1%"}}><DisplayBook/></div>
-    <div style={{marginRight:"1%"}}><DeleteBook /></div>
-    <div style={{marginRight:"1%"}}><UpdateBook/></div>
+    <div style={{marginRight:"1%"}}><DisplayBook bookList={localData} /></div>
+    
     </>
   )
 }
