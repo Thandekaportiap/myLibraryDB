@@ -1,9 +1,9 @@
 // This component create function in the CRUD operationd
 import React from "react";
 
+console.log("this is from addbook")
 const addBook = ({book}) => {
-    
-    //console.log(book)
+    console.log(book)
 
     let myBooks = JSON.parse(localStorage.getItem("booktable"))
     console.log(myBooks)

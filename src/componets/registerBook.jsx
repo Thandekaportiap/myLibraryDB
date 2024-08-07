@@ -15,6 +15,7 @@ const registerBook = () => {
         console.log(input);
         <AddBook book={input}/>
       }
+      
 
     return (
         <>
@@ -36,8 +37,8 @@ const registerBook = () => {
          
             Pages 
                 <input type="text" 
-                 name="pages" 
-                 value={input.pages || ""} 
+                 name="no_of_pages" 
+                 value={input.no_of_pages || ""} 
                  onChange={handleChange}/>
             
             Edition 
