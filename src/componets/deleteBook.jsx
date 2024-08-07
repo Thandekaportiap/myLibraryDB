@@ -2,9 +2,10 @@
 import {useState} from "react"
 
 const deleteBook = ({isbm}) =>{
-    const [filtedList, setFiltedList] = useState("")
-    
     let localData = JSON.parse(localStorage.getItem("booktable"));
+    const [filtedList, setFiltedList] = useState(localData)
+
+   
 
     const handleDelete = () => {
 
