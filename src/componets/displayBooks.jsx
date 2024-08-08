@@ -2,18 +2,12 @@
 import BookCard from "./bookCard";
 
 const displayBook = ({bookList}) => {
-    // const handleRead = () => {
-    //     let localData = localStorage.getItem("booktable");
-    //     let newList = localData ? JSON.parse(localData) : [];
-    //   return (
-      
-    //   );
-    //   }
+   
     return (
         <>
      <div style={{
       display:"flex",
-      
+      marginLeft: "2%",
      }}>
      {bookList.map(item => (
             <BookCard key={item.isbm} book={item}/>

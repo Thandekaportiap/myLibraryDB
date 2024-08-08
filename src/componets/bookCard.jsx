@@ -2,12 +2,12 @@ import React from "react";
 import DeleteBook from "./deleteBook"
 
 const bookCard = ({book}) =>{
-    // console.log(book)
+   // console.log(book.isbm)
 
     return(
         <>
         <div style={{
-        width:"25%",
+        width:"65%",
         height: "70vh",
         borderRadius: "3%",
         boxShadow: "0 4px 8px 4px grey",
@@ -46,7 +46,7 @@ const bookCard = ({book}) =>{
         <div style={{margin:"3%"}}>
             <span className="price">{book.price}</span>
         </div>
-        <DeleteBook isbm={book.isbm}/>
+        <DeleteBook isbm={book.isbm} />
       </div>
 
         </>

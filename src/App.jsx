@@ -48,8 +48,9 @@ function App() {
   ]
 
   
-  // localStorage.setItem("booktable" , JSON.stringify(bookTable))
+  //localStorage.setItem("booktable" , JSON.stringify(bookTable))
   let localData = JSON.parse(localStorage.getItem("booktable"));
+  
 
   return (
     <>
