@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 
 const deleteBook = ({ isbm }) => {
+   // console.log(isbm)
   const [filtedList, setFiltedList] = useState([]);
 
   useEffect(() => {
@@ -12,7 +13,7 @@ const deleteBook = ({ isbm }) => {
     const filteredData = filtedList.filter(item => item.isbm !== isbm);
     setFiltedList(filteredData);
 
-    console.log(filteredData)
+    // console.log(filteredData)
     localStorage.setItem('booktable', JSON.stringify(filteredData));
   };
 

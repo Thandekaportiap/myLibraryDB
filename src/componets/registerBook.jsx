@@ -21,7 +21,14 @@ const registerBook = () => {
     return (
         <>
     
-        <form className="form"  onSubmit={handleSubmit} >
+        <form style={{
+            marginLeft: "2%",
+            marginTop: "2%",
+            display: "flex",
+            flexDirection: "column",
+            height: "80%",
+            width: "30%",
+        }}  onSubmit={handleSubmit} >
             <h3>Add New Book Into Our DataBase</h3>
 
             ISBM 

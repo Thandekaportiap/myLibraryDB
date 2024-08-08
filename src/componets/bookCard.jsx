@@ -11,7 +11,8 @@ const bookCard = ({book}) =>{
         height: "70vh",
         borderRadius: "3%",
         boxShadow: "0 4px 8px 4px grey",
-        background: "white",
+        background: "radial-gradient(circle, white, lightgreen, white)",
+        margin:"2%",
       }}>
         <div className="firstDiv" style={{
              width:"100%",
@@ -43,7 +44,11 @@ const bookCard = ({book}) =>{
                 padding: "2%",
             }}>by {book.editer}</span>
         </div>
-        <div style={{margin:"3%"}}>
+        <div style={{margin:"3%",
+            lineHeight: "3rem",
+            fontSize: "xx-large",
+            padding: "2%",
+        }}>
             <span className="price">{book.price}</span>
         </div>
         <DeleteBook isbm={book.isbm} />
