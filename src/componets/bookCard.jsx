@@ -1,5 +1,6 @@
 import React from "react";
 import DeleteBook from "./deleteBook"
+import UpdateBook from "./updateBook";
 
 const bookCard = ({book}) =>{
    // console.log(book.isbm)
@@ -51,7 +52,10 @@ const bookCard = ({book}) =>{
         }}>
             <span className="price">{book.price}</span>
         </div>
+        <div style={{margin:"2% 2% 0 2%"}}>
         <DeleteBook isbm={book.isbm} />
+        <UpdateBook isbm={book.isbm}/>
+        </div>
       </div>
 
         </>
