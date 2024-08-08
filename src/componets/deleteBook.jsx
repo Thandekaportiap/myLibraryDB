@@ -15,6 +15,7 @@ const deleteBook = ({ isbm }) => {
 
     // console.log(filteredData)
     localStorage.setItem('booktable', JSON.stringify(filteredData));
+    alert("Delete Successfully!")
   };
 
   return (

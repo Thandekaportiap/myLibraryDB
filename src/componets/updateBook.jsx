@@ -1,9 +1,11 @@
 // this is the Update function in the CRUD operation
+import { useEffect, useState } from "react"
 
-const updateBook = () =>{
+const updateBook = ({isbm}) =>{
 
     const handleUpdate = () => {
-
+        
+        alert("Delete Successfully!")
     }
 
     return(
