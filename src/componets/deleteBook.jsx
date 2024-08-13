@@ -10,12 +10,12 @@ const deleteBook = ({ isbm }) => {
   }, []);
 
   const handleDelete = () => {
+    
     const filteredData = filtedList.filter(item => item.isbm !== isbm);
     setFiltedList(filteredData);
-
     // console.log(filteredData)
     localStorage.setItem('booktable', JSON.stringify(filteredData));
-    alert("Delete Successfully!")
+    alert("deleted successfully")
   };
 
   return (
