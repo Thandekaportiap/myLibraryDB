@@ -3,9 +3,13 @@ import {addBook} from "./addBook";
 
 
 const updateBook = ({book}) => {
-    //console.log(book)
-    console.log(book.isbm)
+    const [isFormVisible, setIsFormVisible] = useState(false);
     const [input, setInput] = useState({});
+    
+    const handleUpdate = () => {
+        
+    }
+    
 
     const handleChange = (event) => {
         const name = event.target.name;
@@ -19,7 +23,7 @@ const updateBook = ({book}) => {
         addBook(input)
       }
       
-      const [isFormVisible, setIsFormVisible] = useState(false);
+     
 
       const handleButtonClick = () => {
         setIsFormVisible(true);
@@ -37,7 +41,7 @@ const updateBook = ({book}) => {
           color: "white",
           padding: "12px 12px",
           borderRadius: "5px"
-        }} onClick={handleButtonClick}>Show FormUpdate</button>
+        }} onClick={handleButtonClick}>FormUpdate</button>
     {isFormVisible && (
         <form style={{
             marginLeft: "2%",
