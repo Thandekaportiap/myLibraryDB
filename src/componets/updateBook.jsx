@@ -1,14 +1,23 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import {addBook} from "./addBook";
 
 
-const updateBook = ({book}) => {
+const updateBook = ({book, isbm}) => {
     const [isFormVisible, setIsFormVisible] = useState(false);
     const [input, setInput] = useState({});
+    const [filtedList, setFiltedList] = useState([]);
+    useEffect(() => {
+        const storedData = JSON.parse(localStorage.getItem("booktable"));
+        setFiltedList(storedData || []);
+      }, []);
+
+      const handleDelete = () => {
+        const filteredData = filtedList.filter(item => item.isbm !== isbm);
+        setFiltedList(filteredData);
+        localStorage.setItem('booktable', JSON.stringify(filteredData));
+      };
     
-    const handleUpdate = () => {
-        
-    }
+    
     
 
     const handleChange = (event) => {
@@ -22,7 +31,10 @@ const updateBook = ({book}) => {
         console.log(input);
         addBook(input)
       }
-      
+      const handleUpdate = () => {
+        handleDelete()
+        handleSubmit()
+    }
      
 
       const handleButtonClick = () => {
@@ -114,6 +126,7 @@ const updateBook = ({book}) => {
                  onChange={handleChange}/>
 
 <button onClick={handleCloseForm}>Close</button>
+<button type="submit" onClick={handleUpdate}>Update</button>
         </form>
     )}
         </>

@@ -54,7 +54,7 @@ const bookCard = ({book}) =>{
         </div>
         <div style={{margin:"2% 2% 0 2%"}}>
         <DeleteBook isbm={book.isbm} />
-        <UpdateBook book={book}/>
+        <UpdateBook isbm={book.isbm} book={book}/>
         </div>
       </div>
 
